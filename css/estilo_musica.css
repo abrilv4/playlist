@@ -71,8 +71,9 @@ body {
 }
 .herramientas {
     position: absolute;
-    left: 40%;
+    left: 32%;
     top: 25%;
+    width: 40%;
 }
 .anterior {
     width: 40px;
@@ -88,4 +89,7 @@ body {
     margin-left: 10%;
     height: 90%;
     box-shadow: 5px 9px 3px black;
+}
+.audio {
+    width: 80%;
 }
