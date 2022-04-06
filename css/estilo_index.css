@@ -4,29 +4,35 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 ul {
     list-style-type: none;
     position: relative;
-    top: 10px;    
+    top: 10px;
 }
+
 body {
     background-color: white;
 }
+
 a {
     color: white;
     text-decoration: none;
 }
-.general{
+
+.general {
     width: 100%;
-    height: 100%; 
+    height: 100%;
     overflow: hidden;
 }
+
 .container-superior {
     position: relative;
     width: 100%;
     height: 100px;
     background-color: #555855;
 }
+
 .logo {
     position: relative;
     max-width: 100%;
@@ -36,7 +42,8 @@ a {
     right: -25px;
     top: 25px;
 }
-.title{
+
+.title {
     text-shadow: 5px 5px 3px black;
     position: relative;
     top: -25px;
@@ -44,7 +51,8 @@ a {
     font-size: 35px;
     color: white;
 }
-.container-medio{
+
+.container-medio {
     background-color: #f98009;
     position: relative;
     width: 100%;
@@ -52,18 +60,24 @@ a {
     align-items: center;
     justify-content: center;
 }
+
 .musica {
     position: relative;
     top: 0%;
     left: 0%;
     font-size: 30px;
 }
-.container-inferior{
+.musica:hover {
+    color: green;
+    text-shadow: 2px 2px 2px black;
+}
+.container-inferior {
     background-color: #555855;
     position: relative;
     width: 100%;
     height: 117px;
 }
+
 .logomusica {
     position: relative;
     top: 0%;
@@ -71,8 +85,31 @@ a {
     width: 300px;
     right: 300px;
 }
+
+.logomusica:hover {
+    filter: contrast(50);
+    transform: rotate(20deg);
+    transition: 1s;
+}
+
 .container-musica {
     text-align: center;
     position: relative;
     top: 25%;
+}
+
+.acercade:hover {
+    color: green;
+}
+
+.politica:hover {
+    color: green;
+}
+
+.ayuda:hover {
+    color: green;
+}
+
+.legal:hover {
+    color: green;
 }

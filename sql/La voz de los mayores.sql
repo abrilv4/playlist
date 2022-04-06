@@ -21,7 +21,7 @@ drop table if exists USUARIOS;
 /*==============================================================*/
 create table AUDIOLIBRO
 (
-   ID_AL                int not null,
+   ID_AL                int auto_increment not null,
    ID_U                 int,
    NOMBRE_AL            varchar(50) not null,
    AUTOR_AL             varchar(50) not null,
@@ -37,7 +37,7 @@ create table AUDIOLIBRO
 /*==============================================================*/
 create table HISTORIA
 (
-   ID_H                 int not null,
+   ID_H                 int auto_increment not null,
    ID_U                 int,
    TITULO_H             varchar(50) not null,
    DESCRIPCION_H        varchar(200) not null,
@@ -50,7 +50,7 @@ create table HISTORIA
 /*==============================================================*/
 create table MUSICA
 (
-   ID_M                 int not null,
+   ID_M                 int auto_increment not null,
    NOMBRE_M             varchar(50) not null,
    AUTOR_M              varchar(50) not null,
    ENLACE_M             varchar(150) not null,
@@ -74,7 +74,7 @@ create table PERTENECE
 /*==============================================================*/
 create table PLAYLIST
 (
-   ID_P                 int not null,
+   ID_P                 int auto_increment not null,
    ID_U                 int,
    NOMBRE_P             varchar(50) not null,
    DESCRIPCION_P        varchar(200),
@@ -86,7 +86,7 @@ create table PLAYLIST
 /*==============================================================*/
 create table USUARIOS
 (
-   ID_U                 int not null,
+   ID_U                 int auto_increment not null,
    NOMBRE_U             char(50) not null,
    CONTRASENIA_U        varchar(20) not null,
    CORREO_U             varchar(100),
