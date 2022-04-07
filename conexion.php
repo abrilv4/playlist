@@ -31,7 +31,7 @@
                 echo $fila[2] . "</td><td>";
                 echo $fila[4] . "</td><td>";
                 echo $fila[5] . "</td><td>";
-                echo $fila[6] . "</td><td></tr></table>";
+                echo $fila[6] . "</td></tr></table>";
                 echo "<br>";
             }
             mysqli_close($conexion);
