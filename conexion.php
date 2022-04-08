@@ -29,6 +29,7 @@
                 echo $fila[0] . "</td><td>";
                 echo $fila[1] . "</td><td>";
                 echo $fila[2] . "</td><td>";
+                echo $fila[3] . "</td><td>";
                 echo $fila[4] . "</td><td>";
                 echo $fila[5] . "</td><td>";
                 echo $fila[6] . "</td><td></tr></table>";
