@@ -93,8 +93,12 @@
             $consulta_artista = "SELECT AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]'";
             $resultadosN=mysqli_query($conexion,$consulta_nombre);
             $resultadosA=mysqli_query($conexion,$consulta_artista);
-            echo $resultadosN;
-            echo $resultadosA;
+            while($rowN=mysqli_fetch_row($resultadosN)){
+            echo $rowN[0]."</td><td class='nombre'>";
+            }
+            while($rowA=mysqli_fetch_row($resultadosA)){
+                echo $rowA[0]."</td><td class='autor'>";
+                }
             ?>
         </div>
         <div class="herramientas">
