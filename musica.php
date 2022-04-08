@@ -44,6 +44,7 @@
                 $vector_canciones=[];
                 $num = 1;
                 $pos = 0;
+                $indice = 0;
                 echo "<br><div class='title-musica'><table class= 'titulos'>
                     <tr>
                         <td class='t1'><b>N°</b></td>
@@ -89,11 +90,11 @@
             <?php     
             $consulta_nombre = "SELECT NOMBRE_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]'";
             $consulta_artista = "SELECT AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]'";
-            echo $consulta_nombre;
-            echo $consulta_artista;
+            $resultadosN=mysqli_query($conexion,$consulta_nombre);
+            $resultadosA=mysqli_query($conexion,$consulta_artista);
+            echo $resultadosN;
+            echo $resultadosA;
             ?>
-            <h1>Limon y sal</h1>
-            <h4>Julieta Venegas</h2>
         </div>
         <div class="herramientas">
             <button class="boton-anterior">
