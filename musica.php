@@ -86,16 +86,12 @@
             <h4>Julieta Venegas</h2>
         </div>
         <div class="herramientas">
-            $clave = "0";
             <button class="boton-anterior">
                 <img class="anterior" src="siguiente musica.png">
-                if($clave > 0){
-                  $clave = $clave - 1;  
-                }else{
-                    $clave = "0";
-                }
-                <source src= $vector_canciones[$clave]
-                    type="audio/mp3">
+                <script>
+                var canciones = <?php echo json_encode($vector_canciones);?>;
+                function next_song(canciones);
+                </script>
             </button>
             <audio controls class="audio">
                 <source src= $vector_canciones[$clave]
@@ -103,13 +99,10 @@
             </audio>
             <button class="boton-siguiente">
                 <img class="anterior" src="siguiente musica.png">
-                if($clave < count($vector_canciones)){
-                    $clave = $clave + 1;
-                }else{
-                    $clave = count($vector_canciones) -1;
-                }
-                <source src= $vector_canciones[$clave]
-                    type="audio/mp3">
+                <script>
+                var canciones = <?php echo json_encode($vector_canciones);?>;
+                function previous_song(canciones);
+                </script>
             </button>
         </div>
     </div>
