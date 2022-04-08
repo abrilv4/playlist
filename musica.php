@@ -16,7 +16,7 @@
 <body>
     <div class="general">
         <div class="container-superior">
-            <img class="logo" src="logo1.png">
+        <a class="logo" href="index.html"><img class="logo" src="logo1.png"></a><br>
             <h1 class="title">La Voz de los mayores</h1>
         </div>
     </div>
@@ -41,6 +41,7 @@
                 $enlace;
                 $vector_canciones=[];
                 $num = 1;
+                
                 echo "<br><div class='title-musica'><table class= 'titulos'>
                     <tr>
                         <td class='t1'><b>N°</b></td>
@@ -85,15 +86,30 @@
             <h4>Julieta Venegas</h2>
         </div>
         <div class="herramientas">
+            $clave = "0";
             <button class="boton-anterior">
                 <img class="anterior" src="siguiente musica.png">
+                if($clave > 0){
+                  $clave = $clave - 1;  
+                }else{
+                    $clave = "0";
+                }
+                <source src= $vector_canciones[$clave]
+                    type="audio/mp3">
             </button>
             <audio controls class="audio">
-                <source src="https://drive.google.com/uc?export=download&amp;id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy"
+                <source src= $vector_canciones[$clave]
                     type="audio/mp3">
             </audio>
             <button class="boton-siguiente">
                 <img class="anterior" src="siguiente musica.png">
+                if($clave < count($vector_canciones)){
+                    $clave = $clave + 1;
+                }else{
+                    $clave = count($vector_canciones) -1;
+                }
+                <source src= $vector_canciones[$clave]
+                    type="audio/mp3">
             </button>
         </div>
     </div>
