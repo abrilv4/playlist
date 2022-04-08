@@ -44,7 +44,6 @@
                 $vector_canciones=[];
                 $num = 1;
                 $pos = 0;
-                $indice = 0;
                 echo "<br><div class='title-musica'><table class= 'titulos'>
                     <tr>
                         <td class='t1'><b>N°</b></td>
@@ -61,14 +60,14 @@
                     echo "<table><tr><td class='id'>";
                     $id_M = $fila[0];
                     $enlace = $fila[3];
-                    $id_MU[$indice] =  $id_M;
-                    $enlace_MU[$indice] = $enlace;
+                    $id_MU[] =  $id_M;
+                    $enlace_MU[] = $enlace;
                     echo $num."</td><td class='nombre'>";
                     $num++;
                     echo $fila[1]."</td><td class='autor'>";
                     echo $fila[2]."</td><td class='genero'>"; 
                     $id_enlace = $id_M."/_".$enlace;
-                    $vector_canciones[$indice]=$id_enlace;
+                    $vector_canciones[]=$id_enlace;
                     $indice++;
                     echo $fila[4]."</td><td class='fechaPublicacion'>";
                     echo $fila[5]."</td><td class='tiempo'>";
@@ -89,16 +88,12 @@
     <div class="container-inferior">
         <div class="info-musica">
             <?php     
-            $consulta_nombre = "SELECT NOMBRE_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]'";
-            $consulta_artista = "SELECT AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]'";
-            $resultadosN=mysqli_query($conexion,$consulta_nombre);
-            $resultadosA=mysqli_query($conexion,$consulta_artista);
+            $consulta_NA= "SELECT NOMBRE_M, AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]'";
+            $resultadosNA=mysqli_query($conexion,$consulta_NA);
             while($rowN=mysqli_fetch_row($resultadosN)){
-            echo $rowN[0]."</td><td class='nombre'>";
+                 echo $rowN[0]."</td><td class='nombre'>"; 
+                 echo $rowN[1]."</td><td class='autor'>";
             }
-            while($rowA=mysqli_fetch_row($resultadosA)){
-                echo $rowA[0]."</td><td class='autor'>";
-                }
             ?>
         </div>
         <div class="herramientas">
