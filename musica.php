@@ -39,9 +39,11 @@
                 $resultados=mysqli_query($conexion,$consulta);
                 $id_M;
                 $enlace;
+                $id_MU=[];
+                $enlace_MU=[];
                 $vector_canciones=[];
                 $num = 1;
-                
+                $pos = '0';
                 echo "<br><div class='title-musica'><table class= 'titulos'>
                     <tr>
                         <td class='t1'><b>N°</b></td>
@@ -58,6 +60,8 @@
                     echo "<table><tr><td class='id'>";
                     $id_M = $fila[0];
                     $enlace = $fila[3];
+                    $id_MU[] =  $id_M;
+                    $enlace_MU[] = $enlace;
                     echo $num."</td><td class='nombre'>";
                     $num++;
                     echo $fila[1]."</td><td class='autor'>";
@@ -82,27 +86,43 @@
     </div>
     <div class="container-inferior">
         <div class="info-musica">
+            <?php     
+            $consulta_nombre = "SELECT NOMBRE_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]'";
+            $consulta_artista = "SELECT AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]'";
+            echo $consulta_nombre;
+            echo $consulta_artista;
+            ?>
             <h1>Limon y sal</h1>
             <h4>Julieta Venegas</h2>
         </div>
         <div class="herramientas">
             <button class="boton-anterior">
                 <img class="anterior" src="siguiente musica.png">
-                <script>
-                var canciones = <?php echo json_encode($vector_canciones);?>;
-                function next_song(canciones);
-                </script>
+                <?php
+                if($pos > 0)){
+                    $pos = $pos -1;
+                }else{
+                    $pos = $id_M.count()-1;
+                }
+                ?>
+                <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
+                    tipo =" audio/mp3 ">
             </button>
             <audio controls class="audio">
-                <source src= $vector_canciones[$clave]
-                    type="audio/mp3">
+                <source src =" https://drive.google.com/uc?export=download&id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy "
+                    tipo =" audio/mp3 ">
             </audio>
             <button class="boton-siguiente">
                 <img class="anterior" src="siguiente musica.png">
-                <script>
-                var canciones = <?php echo json_encode($vector_canciones);?>;
-                function previous_song(canciones);
-                </script>
+                <?php
+                if($pos < $id_M.count()){
+                    $pos = $pos +1;
+                }else{
+                    $pos = 0;
+                }
+                ?>
+                <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
+                    tipo =" audio/mp3 ">
             </button>
         </div>
     </div>
