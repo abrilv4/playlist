@@ -21,7 +21,7 @@
                 exit();
             }
             mysqli_set_charset($conexion, "utf8");
-            $consulta="SELECT * FROM musica";
+            /*$consulta="SELECT * FROM musica";
             $resultados=mysqli_query($conexion,$consulta);
             
             while($fila=mysqli_fetch_row($resultados)){
@@ -33,7 +33,7 @@
                 echo $fila[5] . "</td><td>";
                 echo $fila[6] . "</td></tr></table>";
                 echo "<br>";
-            }
+            }*/
             mysqli_close($conexion);
         ?>
     </body>

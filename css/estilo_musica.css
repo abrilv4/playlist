@@ -48,6 +48,7 @@ body {
     height: 720px;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .container-inferior{
     background-color: #555855;
@@ -93,4 +94,90 @@ body {
 }
 .audio {
     width: 75%;
+}
+.container-musica{
+    background-color: #09ec2e;
+    width: 80%;
+    height: 7%;
+    margin: auto;
+    box-shadow: 5px 5px 3px black;
+}
+.container-musica:hover{
+    background-color: #f98009;
+    transition: 100ms;
+    width: 80%;
+    height: 7%;
+    margin: auto;
+    box-shadow: 5px 9px 3px black;
+}
+.id{
+    width: 10%;
+    height: 40px;
+    text-align: left;
+    position: relative;
+    vertical-align: middle;
+}
+.nombre{
+    width: 30%;
+    text-align: left;
+    vertical-align: middle;
+}
+.autor{
+    width: 30%;
+    text-align: left;
+    vertical-align: middle;
+}
+.genero{
+    width: 15%;
+    text-align: left;
+    vertical-align: middle;
+}
+.fechaPublicacion{
+    width: 20%;
+    text-align: left;
+    vertical-align: middle;
+}
+.tiempo{
+    width: 10%;
+    text-align: left;
+    vertical-align: middle;
+}
+.t1{
+    width: 10%;
+    height: 40px;
+    text-align: left;
+    position: relative;
+    vertical-align: middle; 
+}
+.t2{
+    width: 30%;
+    text-align: left;
+    vertical-align: middle;
+}
+.t3{
+    width: 30%;
+    text-align: left;
+    vertical-align: middle;
+}
+.t4{
+    width: 18%;
+    text-align: left;
+    vertical-align: middle;
+}
+.t5{
+    width: 25%;
+    text-align: left;
+    vertical-align: middle;
+}
+.t6{
+    width: 10%;
+    text-align: left;
+    vertical-align: middle;
+}
+.title-musica{
+    background-color: aliceblue;
+    width: 80%;
+    height: 9%;
+    margin: auto;
+    box-shadow: 5px 5px 3px #d633f7;
 }

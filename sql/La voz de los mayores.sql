@@ -113,3 +113,4 @@ alter table PLAYLIST add constraint FK_CREA foreign key (ID_U)
 
 --INSERTS
 INSERT INTO `musica` (`ID_M`, `NOMBRE_M`, `AUTOR_M`, `ENLACE_M`, `CATEGORIA_M`, `FECHAPUBLICACION_M`, `TIEMPO_M`) VALUES (NULL, 'Karma Chameleon', 'Culture Club', '1pUXNDF10qDBQfcor6v5cOHRnWiSkfX1h', 'POP', '1983-01-01', '3:59'), (NULL, 'Take On', 'a ha', '1ulKfSsOLIS5e9zTPl-xGAMMsuXU_Jb8s', 'POP', '1985-01-01', '4:04'), (NULL, 'Limon y Sal', 'Julieta Venegas', '1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy', 'POP', '2006-05-30', '3:36');
+INSERT INTO `musica` (`ID_M`, `NOMBRE_M`, `AUTOR_M`, `ENLACE_M`, `CATEGORIA_M`, `FECHAPUBLICACION_M`, `TIEMPO_M`) VALUES (NULL, 'Tiempo Al Tiempo', 'Kjarkas', '1j9RFlSHilvDqy2xpxRbmvDE17HeTrHu2', 'FOLKLORE', '1985-01-01', '4:29');
