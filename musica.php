@@ -69,6 +69,7 @@
                     echo $fila[2]."</td><td class='genero'>"; 
                     $id_enlace = $id_M."/_".$enlace;
                     $vector_canciones[$indice]=$id_enlace;
+                    $indice++;
                     echo $fila[4]."</td><td class='fechaPublicacion'>";
                     echo $fila[5]."</td><td class='tiempo'>";
                     echo $fila[6]."</td></tr></table>";
