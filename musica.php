@@ -43,7 +43,7 @@
                 $enlace_MU=[];
                 $vector_canciones=[];
                 $num = 1;
-                $pos = '0';
+                $pos = 0;
                 echo "<br><div class='title-musica'><table class= 'titulos'>
                     <tr>
                         <td class='t1'><b>N°</b></td>
@@ -105,12 +105,14 @@
                     $pos = $id_M.count()-1;
                 }
                 ?>
-                <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
-                    tipo =" audio/mp3 ">
+                <audio controls class="audio">
+                     <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
+                         tipo =" audio/mp3 ">
+                </audio>
             </button>
             <audio controls class="audio">
-                <source src =" https://drive.google.com/uc?export=download&id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy "
-                    tipo =" audio/mp3 ">
+                 <source src =" https://drive.google.com/uc?export=download&id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy "
+                     tipo =" audio/mp3 ">
             </audio>
             <button class="boton-siguiente">
                 <img class="anterior" src="siguiente musica.png">
@@ -121,8 +123,10 @@
                     $pos = 0;
                 }
                 ?>
-                <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
-                    tipo =" audio/mp3 ">
+                <audio controls class="audio">
+                     <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
+                         tipo =" audio/mp3 ">
+                </audio>
             </button>
         </div>
     </div>
