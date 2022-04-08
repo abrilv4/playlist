@@ -61,14 +61,14 @@
                     echo "<table><tr><td class='id'>";
                     $id_M = $fila[0];
                     $enlace = $fila[3];
-                    $id_MU[] =  $id_M;
-                    $enlace_MU[] = $enlace;
+                    $id_MU[$indice] =  $id_M;
+                    $enlace_MU[$indice] = $enlace;
                     echo $num."</td><td class='nombre'>";
                     $num++;
                     echo $fila[1]."</td><td class='autor'>";
                     echo $fila[2]."</td><td class='genero'>"; 
                     $id_enlace = $id_M."/_".$enlace;
-                    $vector_canciones[]=$id_enlace;
+                    $vector_canciones[$indice]=$id_enlace;
                     echo $fila[4]."</td><td class='fechaPublicacion'>";
                     echo $fila[5]."</td><td class='tiempo'>";
                     echo $fila[6]."</td></tr></table>";
@@ -100,7 +100,7 @@
             <button class="boton-anterior">
                 <img class="anterior" src="siguiente musica.png">
                 <?php
-                if($pos > 0)){
+                if($pos > 0){
                     $pos = $pos -1;
                 }else{
                     $pos = $id_M.count()-1;
