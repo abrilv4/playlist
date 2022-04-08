@@ -11,6 +11,7 @@ ul {
 }
 body {
     background-color: white;
+    min-width: 930px;
 }
 
 .general{
@@ -49,7 +50,15 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    /*overflow: auto;*/
 }
+/**.container-medio::-webkit-scrollbar{
+    width: 7px;
+}
+.container-medio::-webkit-scrollbar-thumb{
+    background: #ff9d00;
+	border-radius: 5px;
+}*/
 .container-inferior{
     background-color: #555855;
     position: relative;
@@ -91,6 +100,14 @@ body {
     margin-left: 10%;
     height: 90%;
     box-shadow: 5px 9px 3px black;
+    overflow: auto;
+}
+.lista-musica::-webkit-scrollbar{
+    width: 7px;
+}
+.lista-musica::-webkit-scrollbar-thumb{
+    background: #ff9d00;
+	border-radius: 5px;
 }
 .audio {
     width: 75%;
