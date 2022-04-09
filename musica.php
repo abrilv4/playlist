@@ -121,34 +121,34 @@
          </script>
         </div>
         <div class="herramientas">
-            <button class="boton-anterior">
-                <img class="anterior" src="siguiente musica.png" onclick = "anterior(); mostrarInfo()">
+            <button onclick = "anterior(); mostrarInfo()" class="boton-anterior">
+                <img class="anterior" src="siguiente musica.png">
             </button>
             <script>
                 var  canciones  =  <?php  echo  json_encode ($enlace_MU); ?> ;
                 var  id_cancion  =  <?php  echo  json_encode ($id_MU); ?> ;
                 var  indice  =  <?php  echo  json_encode ($pos); ?> ;
                 function anterior(){
-                    if (indice < canciones.length()){
+                    if (indice > 0){
                             índice  =  índice  - 1 ;
                     } else{
-                            índice  =  0 ;
+                            índice  =  canciones.length()-1 ;
                      }
                     play(); 
                 }
                 function play(){
                      <?php
                          echo  "<audio controls class='audio'>
-                         <source src ='https://drive.google.com/uc?export=download&amp;id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy'
+                         <source src ='https://drive.google.com/file/d/1pUXNDF10qDBQfcor6v5cOHRnWiSkfX1h/view?usp=sharing'
                          type ='audio/mp3'>
                          </audio>" ;
                     ?>
                 }
                 function siguiente(){
-                    if (indice > 0){
+                    if (indice < canciones.length()){
                             índice  =  índice + 1 ;
                     } else{
-                            índice  =  canciones.length()-1 ;
+                            índice  =  0 ;
                      }
                     play(); 
                 }
