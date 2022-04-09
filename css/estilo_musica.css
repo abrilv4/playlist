@@ -99,7 +99,7 @@ body {
     position: relative;
     margin-right: 10%;
     margin-left: 10%;
-    height: 90%;
+    height: 80%;
     box-shadow: 5px 9px 3px black;
     overflow: auto;
 }
@@ -216,8 +216,9 @@ body {
 }
 .title-musica{
     background-color: #26798E;
-    width: 80%;
+    width: 65%;
     height: 9%;
     margin: auto;
     box-shadow: 5px 5px 3px #211f21;
+
 }

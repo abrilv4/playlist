@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="container-medio">
-        <div class="lista-musica">
+        
             <?php
                 $db_host="localhost";
                 $db_nombre="lavozdelosmayores";
@@ -51,13 +51,14 @@
                         <td class='t6'><b>Duracion</b></td>
                     </tr>
                 </table></div>";
+                echo "<div class='lista-musica'>";
                 echo "<br>";
                 while($fila=mysqli_fetch_row($resultados)){
                     echo "<div class='container-musica'>";
                     $id_M = $fila[0];
                     $enlace = $fila[3];
                     echo "<button class='botones' onclick='saludar($id_M)' id='$id_M'><table><tr><td class='id'>";   
-                    echo $num."</td><td class='nombre'>";
+                    echo $num."</td><td class='nombre' border='1px'>";
                     $num++;
                     echo $fila[1]."</td><td class='autor'>";
                     echo $fila[2]."</td><td class='genero'>"; 
@@ -84,9 +85,10 @@
                     echo $vector_canciones[$i];
                     echo "<br>";
                 }*/
+                echo "</div>"
                
             ?>
-        </div>
+        
     </div>
     <div class="container-inferior">
         <div class="info-musica">
