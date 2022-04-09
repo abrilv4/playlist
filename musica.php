@@ -134,12 +134,23 @@
                     } else{
                             índice  =  0 ;
                      }
+                    play(); 
+                }
+                function play(){
                      <?php
                          echo  "<audio controls class='audio'>
-                         <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
+                         <source src ='https://drive.google.com/uc?export=download&amp;id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy'
                          type ='audio/mp3'>
                          </audio>" ;
-                    ?>  
+                    ?>
+                }
+                function siguiente(){
+                    if (indice > 0){
+                            índice  =  índice + 1 ;
+                    } else{
+                            índice  =  canciones.length()-1 ;
+                     }
+                    play(); 
                 }
             </script>
             <?php
@@ -151,31 +162,14 @@
                     </audio> ";
                 }
             ?>
+            
             <audio controls class="audio">
                 <source src="https://drive.google.com/uc?export=download&amp;id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy"
                     type="audio/mp3">
             </audio>
             <button class="boton-siguiente">
-                <img class="anterior" src="siguiente musica.png" onclick = "siguiente()"> 
+                <img class="anterior" src="siguiente musica.png" onclick = "siguiente(); mostrarInfo()"> 
             </button>
-            <script>
-                var  canciones  =  <?php  echo  json_encode ($enlace_MU); ?> ;
-                var  id_cancion  =  <?php  echo  json_encode ($id_MU); ?> ;
-                var  indice  =  <?php  echo  json_encode ($pos); ?> ;
-                function siguiente(){
-                    if (indice > 0){
-                            índice  =  índice + 1 ;
-                    } else{
-                            índice  =  canciones.length()-1 ;
-                     }
-                     <?php
-                         echo  "<audio controls class='audio'>
-                         <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
-                         type ='audio/mp3'>
-                         </audio>" ;
-                    ?>  
-                }
-            </script>
         </div>
     </div>
 </body>
