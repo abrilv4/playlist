@@ -105,10 +105,10 @@
                     }else{
                           $pos = count($id_M)-1;
                      } 
-                     echo '<audio controls class="audio">
-                     <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
-                         tipo =" audio/mp3 ">
-                    </audio>';
+                     echo "<audio controls class="audio">
+                     <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
+                         tipo =' audio/mp3 '>
+                    </audio>";
                 }
                 ?> 
             
@@ -126,10 +126,10 @@
                     }else{
                         $pos = 0;
                     }
-                    echo '<audio controls class="audio">
-                    <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
-                        tipo =" audio/mp3 ">
-                   </audio>';
+                    echo "<audio controls class="audio">
+                    <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
+                        tipo ='audio/mp3'>
+                   </audio>";
                 }
                 ?>      
         </div>
