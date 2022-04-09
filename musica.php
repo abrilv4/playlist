@@ -39,7 +39,10 @@
                 $resultados=mysqli_query($conexion,$consulta);
                 $id_M;
                 $enlace;
+                $id_MU =[];
+                $enlace_MU =[];
                 $vector_canciones=[];
+                $pos = 0;
                 $num = 1;
                 echo "<br><div class='title-musica'><table class= 'titulos'>
                     <tr>
@@ -57,6 +60,8 @@
                     echo "<div class='container-musica'>";
                     $id_M = $fila[0];
                     $enlace = $fila[3];
+                    $id_MU [] =   $id_M;
+                    $enlace_MU [] = $enlace;
                     echo "<button class='botones' onclick='saludar($id_M)' id='$id_M'><table><tr><td class='id'>";   
                     echo $num."</td><td class='nombre' border='1px'>";
                     $num++;
@@ -92,13 +97,51 @@
     </div>
     <div class="container-inferior">
         <div class="info-musica">
-            <h1>Limon y sal</h1>
-            <h4>Julieta Venegas</h2>
+        <?php  
+             $consulta_NA = "SELECT NOMBRE_M, AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]' " ;
+             $resultadosNA = mysqli_query ($conexion,$consulta_NA);
+             while ( $filaN = mysqli_fetch_row ( $resultadosNA)){
+                    echo  $filaN [0];
+                    echo "<br>";
+                    echo  $filaN [1];
+             }
+        ?>  
+        <script>
+            function mostrarInfo(){
+                <?php  
+                    $consulta_NA = "SELECT NOMBRE_M, AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]' " ;
+                    $resultadosNA = mysqli_query ($conexion,$consulta_NA);
+                    while ( $filaN = mysqli_fetch_row ( $resultadosNA)){
+                         echo  $filaN [0];
+                         echo "<br>";
+                         echo  $filaN [1];
+                    }
+                ?>
+            }
+         </script>
         </div>
         <div class="herramientas">
             <button class="boton-anterior">
-                <img class="anterior" src="siguiente musica.png">
+                <img class="anterior" src="siguiente musica.png" onclick = "anterior(); mostrarInfo()">
             </button>
+            <script>
+                var  canciones  =  <?php  echo  json_encode ($enlace_MU); ?> ;
+                var  id_cancion  =  <?php  echo  json_encode ($id_MU); ?> ;
+                var  indice  =  <?php  echo  json_encode ($pos); ?> ;
+                function anterior(){
+                    if (indice < canciones.length()){
+                            índice  =  índice  - 1 ;
+                    } else{
+                            índice  =  0 ;
+                     }
+                     <?php
+                         echo  "<audio controls class='audio'>
+                         <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
+                         type ='audio/mp3'>
+                         </audio>" ;
+                    ?>  
+                }
+            </script>
             <?php
             function play($id){         
                     $en="SELECT ENLACE_M FROM musica WHERE ID_M=$id";
@@ -113,8 +156,26 @@
                     type="audio/mp3">
             </audio>
             <button class="boton-siguiente">
-                <img class="anterior" src="siguiente musica.png">
+                <img class="anterior" src="siguiente musica.png" onclick = "siguiente()"> 
             </button>
+            <script>
+                var  canciones  =  <?php  echo  json_encode ($enlace_MU); ?> ;
+                var  id_cancion  =  <?php  echo  json_encode ($id_MU); ?> ;
+                var  indice  =  <?php  echo  json_encode ($pos); ?> ;
+                function siguiente(){
+                    if (indice > 0){
+                            índice  =  índice + 1 ;
+                    } else{
+                            índice  =  canciones.length()-1 ;
+                     }
+                     <?php
+                         echo  "<audio controls class='audio'>
+                         <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
+                         type ='audio/mp3'>
+                         </audio>" ;
+                    ?>  
+                }
+            </script>
         </div>
     </div>
 </body>
