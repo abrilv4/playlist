@@ -97,6 +97,7 @@
         <div class="herramientas">
             <button class="boton-anterior">
                 <img class="anterior" src="siguiente musica.png" onclick ="anterior()">
+            </button>
                 <?php
                 function anterior(){
                     if($pos > 0){
@@ -109,15 +110,15 @@
                          tipo =" audio/mp3 ">
                     </audio>';
                 }
-                ?>
-                
-            </button>
+                ?> 
+            
             <audio controls class="audio">
                  <source src =" https://drive.google.com/uc?export=download&id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy "
                      tipo =" audio/mp3 ">
             </audio>
             <button class="boton-siguiente">
                 <img class="anterior" src="siguiente musica.png" onclick = "siguiente()">
+            </button>
                 <?php
                 function siguiente(){
                     if($pos < count($id_M)){
@@ -130,9 +131,7 @@
                         tipo =" audio/mp3 ">
                    </audio>';
                 }
-                
-                ?>
-            </button>
+                ?>      
         </div>
     </div>
 </body>
