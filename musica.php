@@ -1,7 +1,3 @@
-<?php
-    include_once("conexion.php")
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +12,7 @@
 <body>
     <div class="general">
         <div class="container-superior">
-            <img class="logo" src="logo1.png">
+            <a class="logo" href="index.html"><img class="logo" src="logo1.png"></a><br>
             <h1 class="title">La Voz de los mayores</h1>
         </div>
     </div>
