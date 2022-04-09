@@ -68,8 +68,8 @@ a {
     font-size: 30px;
 }
 .musica:hover {
-    color: green;
-    text-shadow: 2px 2px 2px black;
+    color: black;
+    text-shadow: 2px 2px 2px white;
 }
 .container-inferior {
     background-color: #555855;
@@ -99,17 +99,17 @@ a {
 }
 
 .acercade:hover {
-    color: green;
+    color: rgb(252, 118, 15);
 }
 
 .politica:hover {
-    color: green;
+    color: #f98009;
 }
 
 .ayuda:hover {
-    color: green;
+    color: #f98009;
 }
 
 .legal:hover {
-    color: green;
+    color: #f98009;
 }
