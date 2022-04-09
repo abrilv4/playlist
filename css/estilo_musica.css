@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul {
+    list-style-type: none;
+    position: relative;
+    top: 10px;    
+}
+body {
+    background-color: white;
+    min-width: 930px;
+    
+}
+
+.general{
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+.container-superior {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #555855;
+}
+.logo {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    height: 50px;
+    width: 50px;
+    right: -25px;
+    top: 25px;
+}
+.title{
+    text-shadow: 5px 5px 3px black;
+    position: relative;
+    top: -25px;
+    left: 100px;
+    font-size: 35px;
+    color: white;
+}
+.container-medio{
+    background-color: #f98009;
+    position: relative;
+    width: 100%;
+    height: 720px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*overflow: auto;*/
+}
+/**.container-medio::-webkit-scrollbar{
+    width: 7px;
+}
+.container-medio::-webkit-scrollbar-thumb{
+    background: #ff9d00;
+	border-radius: 5px;
+}*/
+.container-inferior{
+    background-color: #555855;
+    position: relative;
+    width: 100%;
+    height: 117px;
+}
+.info-musica {
+    color: white;
+    position: relative;
+    margin-left: 15px;
+    top:25%;
+}
+.boton-anterior {
+    background-color: transparent !important;
+    border: none;
+}
+.boton-siguiente {
+    transform: scaleX(-1);
+    background-color: transparent !important;
+    border: none;
+}
+.herramientas {
+    position: absolute;
+    left: 32%;
+    top: 25%;
+    width: 40%;
+}
+.anterior {
+    width: 40px;
+    position: relative;
+    left: 0%;
+}
+.lista-musica{
+    margin: auto;
+    top: 5%;
+    background-color: #555855;
+    position: relative;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 90%;
+    box-shadow: 5px 9px 3px black;
+    overflow: auto;
+}
+.lista-musica::-webkit-scrollbar{
+    width: 15px;
+}
+.lista-musica::-webkit-scrollbar-thumb{
+    background: #ffe3b3;
+	border-radius: 10px;
+}
+.lista-musica::-webkit-scrollbar-thumb:hover{
+    background: #ffffff;
+}
+.lista-musica::-webkit-scrollbar-track{
+    background: #666666;
+    border-radius: 10px;
+}
+.audio {
+    width: 75%;
+}
+.container-musica{
+    background-color: #63CAA7;
+    width: 80%;
+    height: 7%;
+    margin: auto;
+    box-shadow: 5px 5px 3px black;
+}
+.botones{
+    text-align: center;
+    justify-content: center;
+    background-color: #63CAA7;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 1px;
+}
+.container-musica:hover{
+    background-color: #ffc172;
+    transition: 100ms;
+    width: 80%;
+    height: 7%;
+    margin: auto;
+    box-shadow: 5px 9px 3px black;
+}
+.id{
+    width: 10%;
+    height: 40px;
+    text-align: left;
+    position: relative;
+    vertical-align: middle;
+}
+.nombre{
+    width: 30%;
+    text-align: left;
+    vertical-align: middle;
+}
+.autor{
+    width: 30%;
+    text-align: left;
+    vertical-align: middle;
+}
+.genero{
+    width: 15%;
+    text-align: left;
+    vertical-align: middle;
+}
+.fechaPublicacion{
+    width: 20%;
+    text-align: left;
+    vertical-align: middle;
+}
+.tiempo{
+    width: 10%;
+    text-align: left;
+    vertical-align: middle;
+}
+.t1{
+    width: 10%;
+    height: 40px;
+    text-align: left;
+    position: relative;
+    vertical-align: middle; 
+    color: white;
+}
+.t2{
+    width: 30%;
+    text-align: left;
+    vertical-align: middle;
+    color: white;
+}
+.t3{
+    width: 30%;
+    text-align: left;
+    vertical-align: middle;
+    color: white;
+}
+.t4{
+    width: 18%;
+    text-align: left;
+    vertical-align: middle;
+    color: white;
+}
+.t5{
+    width: 25%;
+    text-align: left;
+    vertical-align: middle;
+    color: white;
+}
+.t6{
+    width: 10%;
+    text-align: left;
+    vertical-align: middle;
+    color: white;
+}
+.title-musica{
+    background-color: #26798E;
+    width: 80%;
+    height: 9%;
+    margin: auto;
+    box-shadow: 5px 5px 3px #211f21;
+}
