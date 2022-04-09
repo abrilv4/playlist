@@ -75,10 +75,7 @@
                     //echo "<br>";
                     //echo $id_enlace;
                     echo "</div>";
-                    echo "<br>";
-                    
-                    
-                    
+                    echo "<br>";  
                 }
                 echo '<script>
                     function saludar(id){
@@ -91,22 +88,15 @@
                     echo "<br>";
                 }*/
                 echo "</div>"
-               
             ?>
         
     </div>
-    <div class="container-inferior">
-        <div class="info-musica">
-        <?php  
-             $consulta_NA = "SELECT NOMBRE_M, AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]' " ;
-             $resultadosNA = mysqli_query ($conexion,$consulta_NA);
-             while ( $filaN = mysqli_fetch_row ( $resultadosNA)){
-                    echo  $filaN [0];
-                    echo "<br>";
-                    echo  $filaN [1];
-             }
-        ?>  
-        <script>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous">
+    </script>
+    <script>
             function mostrarInfo(){
                 <?php  
                     $consulta_NA = "SELECT NOMBRE_M, AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]' " ;
@@ -118,16 +108,9 @@
                     }
                 ?>
             }
-         </script>
-        </div>
-        <div class="herramientas">
-            <button onclick = "anterior(); mostrarInfo()" class="boton-anterior">
-                <img class="anterior" src="siguiente musica.png">
-            </button>
-            <script>
                 var  canciones  =  <?php  echo  json_encode ($enlace_MU); ?> ;
                 var  id_cancion  =  <?php  echo  json_encode ($id_MU); ?> ;
-                var  indice  =  <?php  echo  json_encode ($pos); ?> ;
+                var  indice  =  0;
                 function anterior(){
                     if (indice > 0){
                             índice  =  índice  - 1 ;
@@ -137,9 +120,9 @@
                     play(); 
                 }
                 function play(){
-                     <?php
+                    <?php
                          echo  "<audio controls class='audio'>
-                         <source src ='https://drive.google.com/file/d/1pUXNDF10qDBQfcor6v5cOHRnWiSkfX1h/view?usp=sharing'
+                         <source src ='https://drive.google.com/uc?export=download&amp;id=1ulKfSsOLIS5e9zTPl-xGAMMsuXU_Jb8s'
                          type ='audio/mp3'>
                          </audio>" ;
                     ?>
@@ -153,6 +136,22 @@
                     play(); 
                 }
             </script>
+    <div class="container-inferior">
+        <div class="info-musica">
+        <?php  
+             $consulta_NA = "SELECT NOMBRE_M, AUTOR_M FROM MUSICA WHERE ID_M = '$id_MU[$pos]' " ;
+             $resultadosNA = mysqli_query ($conexion,$consulta_NA);
+             while ( $filaN = mysqli_fetch_row ( $resultadosNA)){
+                    echo  $filaN [0];
+                    echo "<br>";
+                    echo  $filaN [1];
+             }
+        ?>  
+        </div>
+        <div class="herramientas">
+            <button class="boton-anterior">
+                <img class="anterior" src="siguiente musica.png" onclick = "anterior(); mostrarInfo()">
+            </button>
             <?php
             function play($id){         
                     $en="SELECT ENLACE_M FROM musica WHERE ID_M=$id";
@@ -164,7 +163,7 @@
             ?>
             
             <audio controls class="audio">
-                <source src="https://drive.google.com/uc?export=download&amp;id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy"
+                <source src="https://drive.google.com/uc?export=download&amp;id=1pUXNDF10qDBQfcor6v5cOHRnWiSkfX1h"
                     type="audio/mp3">
             </audio>
             <button class="boton-siguiente">
@@ -173,5 +172,4 @@
         </div>
     </div>
 </body>
-
 </html>
