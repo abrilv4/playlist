@@ -98,20 +98,24 @@
             <button class="boton-anterior">
                 <img class="anterior" src="siguiente musica.png" onclick ="anterior()">
             </button>
-                <?php
-                function anterior(){
-                    if($pos > 0){
-                          $pos = $pos -1;
-                    }else{
-                          $pos = count($id_M)-1;
-                     } 
-                     echo "<audio controls class='audio'>
-                     <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
+                <script>
+                    var canciones = <?php echo json_encode($enlace_MU); ?>;
+                    var id_cancion = <?php echo json_encode($id_MU); ?>;
+                    var indice = <?php echo json_encode($pos); ?>;
+                    function anterior(){
+                        if(indice > 0){
+                            indice = indice -1;
+                        }else{
+                            indice = id_cancion.length()-1;
+                        }
+                        <?php              
+                         echo "<audio controls class='audio'>
+                         <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
                          tipo =' audio/mp3 '>
-                    </audio>";
-                }
-                ?> 
-            
+                         </audio>";
+                        ?>  
+                    }
+                </script>
             <audio controls class="audio">
                  <source src =" https://drive.google.com/uc?export=download&id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy"
                      tipo =" audio/mp3 ">
@@ -119,19 +123,24 @@
             <button class="boton-siguiente">
                 <img class="anterior" src="siguiente musica.png" onclick = "siguiente()">
             </button>
-                <?php
-                function siguiente(){
-                    if($pos < count($id_M)){
-                        $pos = $pos +1;
-                    }else{
-                        $pos = 0;
+                 <script>
+                    var canciones = <?php echo json_encode($enlace_MU); ?>;
+                    var id_cancion = <?php echo json_encode($id_MU); ?>;
+                    var indice = <?php echo json_encode($pos); ?>;
+                    function anterior(){
+                        if(indice < id_cancion.length()){
+                            indice = indice -1;
+                        }else{
+                            indice = 0;
+                        }
+                        <?php
+                         echo "<audio controls class='audio'>
+                         <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
+                         tipo =' audio/mp3 '>
+                         </audio>";
+                        ?>  
                     }
-                    echo "<audio controls class='audio'>
-                    <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
-                        tipo ='audio/mp3'>
-                   </audio>";
-                }
-                ?>      
+                </script>     
         </div>
     </div>
 </body>
