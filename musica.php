@@ -26,10 +26,8 @@
                 $db_host="localhost";
                 $db_nombre="lavozdelosmayores";
                 $db_usuario="root";
-                $db_contra="";
-    
+                $db_contra="";   
                 $conexion=mysqli_connect($db_host,$db_usuario,$db_contra,$db_nombre);
-    
                 if(mysqli_connect_errno()){
                     echo "Fallo al conectar con la BBDD";
                     exit();
@@ -98,31 +96,36 @@
         </div>
         <div class="herramientas">
             <button class="boton-anterior">
-                <img class="anterior" src="siguiente musica.png">
+                <img class="anterior" src="siguiente musica.png" onclick ="anterior()">
                 <?php
-                if($pos > 0){
-                    $pos = $pos -1;
-                }else{
-                    $pos = $id_M.count()-1;
+                function anterior(){
+                    if($pos > 0){
+                          $pos = $pos -1;
+                    }else{
+                          $pos = count($id_M)-1;
+                     }  
                 }
                 ?>
                 <audio controls class="audio">
                      <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
                          tipo =" audio/mp3 ">
-                </audio>
+                    </audio></b>
             </button>
             <audio controls class="audio">
                  <source src =" https://drive.google.com/uc?export=download&id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy "
                      tipo =" audio/mp3 ">
             </audio>
             <button class="boton-siguiente">
-                <img class="anterior" src="siguiente musica.png">
+                <img class="anterior" src="siguiente musica.png" onclick = "siguiente()">
                 <?php
-                if($pos < $id_M.count()){
-                    $pos = $pos +1;
-                }else{
-                    $pos = 0;
+                function siguiente(){
+                    if($pos < count($id_M)){
+                        $pos = $pos +1;
+                    }else{
+                        $pos = 0;
+                    }
                 }
+                
                 ?>
                 <audio controls class="audio">
                      <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
