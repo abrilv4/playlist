@@ -11,6 +11,8 @@ ul {
 }
 body {
     background-color: white;
+    min-width: 930px;
+    
 }
 
 .general{
@@ -49,7 +51,15 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    /*overflow: auto;*/
 }
+/**.container-medio::-webkit-scrollbar{
+    width: 7px;
+}
+.container-medio::-webkit-scrollbar-thumb{
+    background: #ff9d00;
+	border-radius: 5px;
+}*/
 .container-inferior{
     background-color: #555855;
     position: relative;
@@ -91,19 +101,34 @@ body {
     margin-left: 10%;
     height: 90%;
     box-shadow: 5px 9px 3px black;
+    overflow: auto;
+}
+.lista-musica::-webkit-scrollbar{
+    width: 15px;
+}
+.lista-musica::-webkit-scrollbar-thumb{
+    background: #ffe3b3;
+	border-radius: 10px;
+}
+.lista-musica::-webkit-scrollbar-thumb:hover{
+    background: #ffffff;
+}
+.lista-musica::-webkit-scrollbar-track{
+    background: #666666;
+    border-radius: 10px;
 }
 .audio {
     width: 75%;
 }
 .container-musica{
-    background-color: #09ec2e;
+    background-color: #63CAA7;
     width: 80%;
     height: 7%;
     margin: auto;
     box-shadow: 5px 5px 3px black;
 }
 .container-musica:hover{
-    background-color: #f98009;
+    background-color: #ffc172;
     transition: 100ms;
     width: 80%;
     height: 7%;
@@ -148,36 +173,42 @@ body {
     text-align: left;
     position: relative;
     vertical-align: middle; 
+    color: white;
 }
 .t2{
     width: 30%;
     text-align: left;
     vertical-align: middle;
+    color: white;
 }
 .t3{
     width: 30%;
     text-align: left;
     vertical-align: middle;
+    color: white;
 }
 .t4{
     width: 18%;
     text-align: left;
     vertical-align: middle;
+    color: white;
 }
 .t5{
     width: 25%;
     text-align: left;
     vertical-align: middle;
+    color: white;
 }
 .t6{
     width: 10%;
     text-align: left;
     vertical-align: middle;
+    color: white;
 }
 .title-musica{
-    background-color: aliceblue;
+    background-color: #26798E;
     width: 80%;
     height: 9%;
     margin: auto;
-    box-shadow: 5px 5px 3px #d633f7;
+    box-shadow: 5px 5px 3px #211f21;
 }
