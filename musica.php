@@ -105,7 +105,7 @@
                     }else{
                           $pos = count($id_M)-1;
                      } 
-                     echo "<audio controls class="audio">
+                     echo "<audio controls class='audio'>
                      <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
                          tipo =' audio/mp3 '>
                     </audio>";
@@ -113,7 +113,7 @@
                 ?> 
             
             <audio controls class="audio">
-                 <source src =" https://drive.google.com/uc?export=download&id=" .$enlace_MU[$pos]
+                 <source src =" https://drive.google.com/uc?export=download&id=1Mfg6nHYkEq1gTyfuodfSnWgOn0qz0ACy"
                      tipo =" audio/mp3 ">
             </audio>
             <button class="boton-siguiente">
@@ -126,7 +126,7 @@
                     }else{
                         $pos = 0;
                     }
-                    echo "<audio controls class="audio">
+                    echo "<audio controls class='audio'>
                     <source src =' https://drive.google.com/uc?export=download&id=' .$enlace_MU[$pos]
                         tipo ='audio/mp3'>
                    </audio>";
