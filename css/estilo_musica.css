@@ -121,10 +121,10 @@ body {
 }
 .audio-container{
     position: absolute;
-    width: 75%;
+    width: 50%;
+    left: 25%;
     height: 100%;
-    top: -10%;
-    left: 8%;
+    top: 15%;
 }
 .audio-class{
     width: 100%;
