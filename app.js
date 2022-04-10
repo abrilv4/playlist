@@ -42,14 +42,21 @@ $(function () {
             success: function(response){
                 console.log(response);
                 let enlace = JSON.parse(response);
-                let template ='';
+                let template1 ='';
+                let template2 ='';
+                let template3 ='';
                 enlace.forEach(link =>{
-                    template += `<audio controls class="audio" id="audio" autoplay>
+                    template1 += `<audio controls class="audio-class" id="audio" autoplay>
                         <source src="https://drive.google.com/uc?export=download&amp;id=${link.ENLACE_M}" type="audio/mp3">
                     </audio>
                     `
-                });
-                $('#audio').html(template);
+                    template2 += `<h1 id="nombreM">${link.NOMBRE_M}</h1>`
+                    template3 += `<h3 id="nombreM">${link.AUTOR_M}</h3>`
+                }
+                );
+                $('#audio').html(template1);
+                $('#nombreM').html(template2);
+                $('#nombreA').html(template3);
             }
         })
     })

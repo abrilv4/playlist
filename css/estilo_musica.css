@@ -77,9 +77,11 @@ body {
     border: none;
 }
 .boton-siguiente {
+    position: absolute;
     transform: scaleX(-1);
     background-color: transparent !important;
     border: none;
+    left: 85%;
 }
 .herramientas {
     position: absolute;
@@ -117,8 +119,15 @@ body {
     background: #666666;
     border-radius: 10px;
 }
-.audio {
+.audio-container{
+    position: absolute;
     width: 75%;
+    height: 100%;
+    top: -10%;
+    left: 8%;
+}
+.audio-class{
+    width: 100%;
 }
 .container-musica{
     background-color: #63CAA7;
@@ -221,4 +230,13 @@ body {
     margin: auto;
     box-shadow: 5px 5px 3px #211f21;
 
+}
+h4{
+    font-size: 10px;
+}
+h1{
+    font-size: 20px;
+}
+button{
+    cursor: pointer;
 }
