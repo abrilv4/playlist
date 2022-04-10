@@ -20,7 +20,7 @@ $(function () {
                                 <td class='tiempo'>${musica.TIEMPO_M}</td>
                                 <td>
                                     <button class="lista">
-                                        play
+                                        <img class="play" src="play.png">
                                     </button>
                                 </td>
                             </tr>
@@ -40,7 +40,6 @@ $(function () {
             type: 'POST',
             data: {id},
             success: function(response){
-                console.log(response);
                 let enlace = JSON.parse(response);
                 let template1 ='';
                 let template2 ='';
@@ -62,3 +61,4 @@ $(function () {
     })
 
 })
+
