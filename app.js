@@ -1,4 +1,6 @@
 $(function () {
+    let idactual;
+    let totalmusicas=0
     console.log('jQuery esta funcionando');
     actualizar();
     function actualizar(){
@@ -7,6 +9,7 @@ $(function () {
             type: 'GET',
             success: function (response) {
                 let musicas = JSON.parse(response);
+                totalmusicas=musicas.length;
                 let template = '';
                 musicas.forEach(musica => {
                     template += `
@@ -35,6 +38,33 @@ $(function () {
     $(document).on('click', '.lista', function(){
         let element = $(this)[0].parentElement.parentElement.parentElement.parentElement;
         let id = $(element).attr('idMusica')
+        idactual= Number(id);
+        play(id)
+    })
+    function siguiente(){
+        if(idactual===totalmusicas){
+            alert('ya no hay mas musicas para reproducir')
+        }
+        else{
+        idactual=idactual+1; 
+        play(idactual.toString())
+        }
+
+    }
+    function anterior(){
+        if(idactual===1){
+            alert('no puede ir atras porque es la primera musica')
+        }
+        else{
+        idactual=idactual-1; 
+        play(idactual.toString())
+        }
+
+
+    }
+    $(document).on('click', '.boton-siguiente', siguiente);
+    $(document).on('click', '.boton-anterior', anterior);
+    function play(id){
         $.ajax({
             url: 'musicaid.php',
             type: 'POST',
@@ -58,7 +88,6 @@ $(function () {
                 $('#nombreA').html(template3);
             }
         })
-    })
-
+    }
 })
 
