@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor</title>
+    <link rel="stylesheet" href="css/estilo_musica.css" />
+</head>
+
+<body>
+    <div class="general">
+        <div class="container-superior">
+            <a href="index.html"><img class="logo" src="logo1.png"></a>
+            <h1 class="title">La Voz de los mayores</h1>
+        </div>
+    </div>
+    <div class="container-medio">
+        <br>
+        <div class="title-musica">
+            <table class="titulos">
+                <tr>
+                    <td class='t1'><b>N°</b></td>
+                    <td class='t2'><b>Musica</b></td>
+                    <td class='t3'><b>Artista</b></td>
+                    <td class='t4'><b>Genero</b></td>
+                    <td class='t5'><b>Lanzamiento</b></td>
+                    <td class='t6'><b>Duracion</b></td>
+                </tr>
+            </table>
+        </div>
+        <div class="lista-musica" id="lista-musica">
+            
+        </div>
+    </div>
+    <div class="container-inferior">
+        <div class="info-musica">
+            <h1 id="nombreM">Karma Charmeleon</h1>
+            <h3 id="nombreA">Culture Club</h3>
+        </div>
+        <div class="herramientas">
+            <button class="boton-anterior">
+                <img class="anterior" src="siguiente musica.png">
+            </button>
+            <div class="audio-container" id="audio">
+                <audio controls class="audio-class" id="audio">
+                    <source src="https://drive.google.com/uc?export=download&amp;id=1pUXNDF10qDBQfcor6v5cOHRnWiSkfX1h" type="audio/mp3">
+                </audio>
+            </div>
+            <button class="boton-siguiente">
+                <img class="anterior" src="siguiente musica.png">
+            </button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
