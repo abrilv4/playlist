@@ -42,6 +42,7 @@ $(function () {
         play(id)
     })
     function siguiente() {
+        console.log("holamundo")
         if (idactual === totalmusicas) {
             alert('ya no hay mas musicas para reproducir')
         }
@@ -64,28 +65,33 @@ $(function () {
     }
     $(document).on('click', '.boton-siguiente', siguiente);
     $(document).on('click', '.boton-anterior', anterior);
+    const aud = document.getElementById('audio-player')
+    aud.addEventListener('ended', siguiente);
+    const sourceAudio = document.getElementById("music-source")
     function play(id) {
         $.ajax({
+            
             url: 'musicaid.php',
             type: 'POST',
             data: { id },
             success: function (response) {
                 let enlace = JSON.parse(response);
+                const player = document.getElementById('audio-player')
                 let template1 = '';
                 let template2 = '';
                 let template3 = '';
                 enlace.forEach(link => {
-                    template1 += `<audio controls class="audio-class" id="audio" autoplay>
-                        <source src="https://drive.google.com/uc?export=download&amp;id=${link.ENLACE_M}" type="audio/mp3">
-                    </audio>
-                    `
+                    sourceAudio.setAttribute('src',`http://docs.google.com/uc?export=open&id=${link.ENLACE_M}`)
+                    
                     template2 += `<h1 id="nombreM">${link.NOMBRE_M}</h1>`
                     template3 += `<h3 id="nombreM">${link.AUTOR_M}</h3>`
                 }
                 );
-                $('#audio').html(template1);
+                
                 $('#nombreM').html(template2);
                 $('#nombreA').html(template3);
+                player.load()
+                
             }
         })
     }
