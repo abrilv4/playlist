@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Tahoma;
 }
 
 ul {
@@ -56,7 +56,7 @@ a {
     background-color: #f19236;
     position: relative;
     width: 100%;
-    height: 720px;
+    height: 750px;
     align-items: center;
     justify-content: center;
 }
@@ -68,14 +68,14 @@ a {
     font-size: 30px;
 }
 .musica:hover {
-    color: green;
+    color: #f98009;
     text-shadow: 2px 2px 2px black;
 }
 .container-inferior {
     background-color: #555855;
     position: relative;
     width: 100%;
-    height: 117px;
+    height: 120px;
 }
 
 .logomusica {
@@ -99,17 +99,17 @@ a {
 }
 
 .acercade:hover {
-    color: green;
+    color: #f98009;
 }
 
 .politica:hover {
-    color: green;
+    color: #f98009;
 }
 
 .ayuda:hover {
-    color: green;
+    color: #f98009;
 }
 
 .legal:hover {
-    color: green;
+    color: #f98009;
 }
