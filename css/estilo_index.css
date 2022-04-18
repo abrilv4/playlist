@@ -67,10 +67,6 @@ a {
     left: 0%;
     font-size: 30px;
 }
-.musica:hover {
-    color: #f98009;
-    text-shadow: 2px 2px 2px black;
-}
 .container-inferior {
     background-color: #555855;
     position: relative;
@@ -84,8 +80,11 @@ a {
     left: 0%;
     width: 300px;
     right: 300px;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
 }
-
 .logomusica:hover {
     filter: contrast(50);
     transform: rotate(20deg);
