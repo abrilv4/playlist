@@ -3,7 +3,7 @@
 <head>
     <title>La Voz de los mayores</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="css/estilo_regAudiolibro.css" rel="stylesheet">
     <link rel="shortcut icon" href="logo1.png">
@@ -28,9 +28,36 @@
     
     <main class="main">
         <div class="container-medio">
-            <h2>Registrar Audiolibro</h2>
+            <div class="reg-audiolibro">
+                <h2 class="form-title">Registrar Audiolibro</h2>
+                <div class="block">
+                  <label>Nombre : </label>
+                  <input type="text">
+                 </div>
+                 <div class="block">
+                    <label>Autor : </label>
+                    <input type="text">
+                </div>
+                <div class="block">
+                    <label>Género : </label>
+                    <select name="genero">
+                        <option>Narrativo</option>
+                        <option>Lírico</option>
+                        <option>Dramático</option>
+                        <option>Didáctico</option>
+                    </select>
+                </div>
+                <div class="block">
+                    <label>Audiolibro : </label>
+                    <a href=""> <button>Seleccionar Audiolibro</button> </a>
+                </div>
 
-        </div>
+            <div class="botones">
+                <a href=""><button class="registrar">Registrar</button></a>
+                <a href="index.html"><button class="cancelar">Cancelar</button></a> 
+            </div>
+
+         </div>
         
     </main>
 
