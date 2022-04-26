@@ -4,6 +4,47 @@
     box-sizing: border-box;
     font-family: Tahoma;
 }
+@media (max-width: 1200px) and (max-height: 1000px){
+    .container-medio {
+        height: 500px !important;
+    }
+    .reg-audiolibro{
+        padding-top: 0.2px !important;
+        text-align: center !important;
+        width: 90% !important;
+        height: 70% !important;
+        transform: translate(6%, 24%) !important;
+        box-shadow: 0 0 1rem rgba(9, 0, 0, 3) !important;
+        border-radius: 5px !important;
+    }
+    h2 {
+        font-size: 35px !important;
+    }
+    .botones{
+        padding: 30px !important;
+    }
+    select{
+        font-size: 18px !important;
+    }
+    button{
+        font-size: 18px !important;
+    }
+    .registrar{
+        font-size: 18px !important;
+    }
+    .cancelar{
+        font-size: 18px !important;
+    }
+    label {
+        font-size: 18px !important;
+    }
+    .container-medio {
+        width: 100% !important;
+        height: 750px !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
 
 body {
     background-color: #f19236;
@@ -89,7 +130,7 @@ input {
     display:inline-block;
     vertical-align:middle;
     margin-left:20px;
-    font-size: 16px;
+    font-size: 23px;
     width: 500px;
 }
 
@@ -98,7 +139,7 @@ select{
     margin-bottom: 10px;
     display:inline-block;
     vertical-align:middle;
-    font-size: 16px;
+    font-size: 20px;
     margin-left:20px;
     width: 500px;
 }
@@ -107,7 +148,7 @@ button{
     margin-bottom: 10px;
     display:inline-block;
     vertical-align:middle;
-    font-size: 16px;
+    font-size: 20px;
     background-color: #d6d6d6d3;
     margin-left:20px;
     width: 500px;
@@ -124,7 +165,7 @@ button{
     background: #555855;
     color: aliceblue;
     font-family: Tahoma;
-    font-size: 18px;
+    font-size: 23px;
     position: relative;
 
 }
@@ -136,13 +177,13 @@ button{
     background: #555855;
     color: aliceblue;
     font-family: Tahoma;
-    font-size: 18px;
+    font-size: 23px;
 }
 label {
     display:inline-block;
     padding-top: 2px;
     text-align: left;
-    font-size: 20px;
+    font-size: 23px;
     width: 150px;
 }
 
@@ -153,18 +194,22 @@ label {
     height: 100px;
 }
 .reg-audiolibro{
-    padding-top: 80px;
+    padding-top: 40px;
     text-align: center;
+
+    min-width: 280px;
+    width: 60%;
+    transform: translate(33%, 12%);
+    box-shadow: 0 0 1rem rgba(9, 0, 0, 3);
+    background-color: rgba(240, 239, 239, 0.247);
+    border-radius: 5px;
 }
 
 h2 {
     font: Tahoma;
     margin: 5%;
     color: black;
-    font-size: 2rem;
+    font-size: 40px;
     line-height: 1.3em;
     text-align: center;
 }
-
-
-
