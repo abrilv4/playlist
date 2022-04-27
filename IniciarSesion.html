@@ -9,40 +9,62 @@
 </head>
 <body>
 <div class="general">
-    <div class="container-superior">
-        <img class="logo" src="logo1.png">
-        <h1 class="title">La Voz de los mayores</h1>
-    </div> 
-    <div class="container-medio">
-        <div class="inicio-sesion">
-            <h1 class="form-title">Iniciar Sesion</h1>
-            <div class="Usuario">
-              <h2>Usuario</h2>  
-              <input type="text" name="tipo_de_dato"/>
-             </div>
-            <div class="contra">
-              <h2>Contraseña</h2> 
-              <input type="password" name="clave" />
-             </div> 
-        <div class="botonEntrar">
-            <a href=""> <button>Entrar</button> </a> 
+    <header>
+        <div class="container-superior">
+            <div>
+                <a href="index.html"><img class="logo" src="logo1.png"> </a> 
+                <h1 class="title">  La Voz de los mayores</h1>   
+            </div>
+            <nav class="navigation">
+                <ul>
+                    <li><a class="pagprinc" href="index.html">Atrás</a></li>
+                </ul>
+            </nav>   
         </div>
-     </div>
-     <div class="derecho">
-            <div class="uno">
-            <h2>Aun no tienes una cuenta?</h2>
-        </div>
-         <div class="dos">
-            <h2>Registrate para que puedas iniciar sesion</h2>
-         </div>
-        <div class="botonRegistrarse">
-            <a href=""> <button>Registrarse</button> </a>   
-        </div>
-    </div>  
-    </div>
+
+    </header>
+    <section>
+        <article>
+            <div class="container-izq">
+                <div class="iniciar-sesion">
+                    <h2 class="form-title">Iniciar Sesion</h2>
+                    <div class="block">
+                      <label>Usuario : </label>
+                      <input type="text" maxlength="50">
+                     </div>
+                     <div class="block">
+                        <label>Cotraseña : </label>
+                        <input type="password" maxlength="50">
+                    </div>
+                    <div class="boton-ingreso">
+                        <a href=""><button class="registrar">Entrar</button></a>
+                    </div>
+                </div>
+            </div>           
+        </article>
+        <aside>
+            <div class="container-der">
+                <div class="ir-registro">
+                    <div class="block">
+                      <label>Aun no tienes una cuenta?</label>
+                    </div>  
+                    <div class="block">  
+                      <label>Registrate para que puedas iniciar sesion</label>
+                    </div>
+                        
+                    <div class="boton">
+                        <a href=""><button class="registrar">Registrarse</button></a>
+                    </div>
+                </div>
+            </div>   
+        </aside>
+    </section>
+</div>   
+<footer>
+        <div class="container-inferior">
     
-
-</div> 
-
+        </div>
+   
+</footer>
 </body>
 </html>
